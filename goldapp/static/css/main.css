@@ -1,0 +1,121 @@
+
+
+/*----------------------------*\
+	Product slick
+\*----------------------------*/
+
+.product-slick .slick-slide {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+
+
+/*=========================================================
+	08 -> PRODUCT DETAILS PAGE
+===========================================================*/
+
+/*----------------------------*\
+	Product view
+\*----------------------------*/
+
+#product-main-view .slick-arrow {
+  opacity: 0;
+}
+
+#product-main-view:hover .slick-arrow {
+  opacity: 1;
+}
+
+#product-view {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+#product-view .product-view.slick-slide {
+  opacity: 0.2;
+}
+
+#product-view .product-view.slick-slide.slick-current {
+  opacity: 1;
+  -webkit-box-shadow: 0px 0px 0px 2px #F8694A inset;
+  box-shadow: 0px 0px 0px 2px #F8694A inset;
+}
+
+#product-view .product-view {
+  padding: 7.5px;
+}
+
+.product-view>img {
+  width: 100%;
+}
+
+/*----------------------------*\
+	Product tab
+\*----------------------------*/
+
+
+/*=========================================================
+	11 -> SLICK
+===========================================================*/
+
+/*----------------------------*\
+	Arrows
+\*----------------------------*/
+
+.slick-prev, .slick-next {
+  width: 40px;
+  height: 40px;
+  background: #30323A;
+  z-index: 22;
+}
+
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+  background: #F8694A;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #FFF;
+}
+
+.slick-prev {
+  left: 15px;
+}
+
+.slick-next {
+  right: 15px;
+}
+
+.custom-nav .slick-prev, .custom-nav .slick-next {
+  display: inline-block;
+  position: static;
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+
+/*----------------------------*\
+	Dots
+\*----------------------------*/
+
+.slick-dots li, .slick-dots li button, .slick-dots li button:before {
+  width: 10px;
+  height: 10px;
+}
+
+.slick-dots li button:before {
+  content: "";
+  opacity: 1;
+  background: #DADADA;
+  border-radius: 50%;
+}
+
+.slick-dots li.slick-active button:before {
+  background-color: #F8694A;
+}
+
+.custom-dots .slick-dots {
+  position: static;
+  margin: 15px 0px;
+}
+

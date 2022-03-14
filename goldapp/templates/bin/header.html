@@ -1,0 +1,128 @@
+{%load static%}
+<div class="header-menu-mob pt-2 pb-2 shadow-xss position-fixed w-100 z-index-5 bg-white d-none d-block-sm">
+    <div class="container">
+      <div class="row">
+        <div class="col text-start">
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="modal" data-bs-target="#menumodal" "
+            >
+              <span
+                class=" feather-align-center" style="
+                  font-size: 30px !important;
+                  font-weight: bold;
+                  color: #010107;
+                "></span> <br>
+            <span class="font-xssss" style="margin-left: -5px !important; display: inline-block;margin-top: -10px !important; color: #010107;
+            ">menü</span>
+          </button>
+        </div>
+        <div class="col text-center">
+          <a href="{% url 'goldapp:index' %}" class="font-xs text-grey-900" style="display: inline-block; padding-top: 5px">
+            <img src="{%static 'images/logo/inci.png'%}" style="height: 30px;width: 90px;" alt="" >
+          </a>
+        </div>
+        <div class="col text-end">
+          <div class="dropdown dropdown-right border-0">
+            <button class="btn border-0 rounded-0 dropdown-toggle dropdown-toggle-white ps-3" type="button"
+              data-bs-toggle="modal" data-bs-target="#categorymodal" style="
+                  font-size: 30px !important;
+                  font-weight: bold;
+                  color: #010107;
+                  margin-top: -7px !important;
+                ">
+              <i class="feather-align-left"></i>
+
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-wrapper bg-invert pt-2 z-index-5 ovh bg-blur d-none d-md-block">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 d-flex">
+          <div class="col-sm-6 mb-2">
+            <a href="{% url 'goldapp:index' %}">
+
+              <img src="{%static 'images/logo/inci.png'%}" width="auto" alt="" >
+           
+            </a>
+          </div>
+          
+          <div class="col-sm-6 header-search me-auto mb-2 ms-5">
+            <form action="{% url 'search:search' %}" method="GET">
+              <div class="input-group search_box">
+                <input type="text" class="form-control rounded-5" placeholder="Məhsul axtarın" name="q" value="{{search}}">
+                <button class="btn btn-primary ms-1 rounded-5" type="submit"><i class="feather-search font-xl text-grey-100 "></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="lower-header pt-0 pb-0 bg-invert shadow-xss z-index-1 bg-yellow  d-md-block d-none">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 pe-0">
+          <div class="dropdown dropdown-right border-0">
+            <button class="btn border-0 rounded-0 dropdown-toggle dropdown-toggle-white  ps-3" type="button"
+              data-bs-toggle="modal" data-bs-target="#categorymodal">
+              <i class="feather-align-left"></i>All Categories
+            </button>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="navbar navbar-expand-md p-0">
+            <div class="navbar-collapse collapse show" id="main_nav">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"
+                aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <ul class="navbar-nav" style="margin-left: auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'goldapp:index' %}" aria-expanded="false">Ana səhifə
+                  </a>
+                </li>
+                <!-- <li class="nav-item active">
+                  <a class="nav-link" href="#" aria-expanded="false">Məhsullar
+                  </a>
+                </li> -->
+
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'goldapp:about' %}" aria-expanded="false">Biz kimik</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'goldapp:contact' %}" aria-expanded="false">Əlaqə</a>
+                </li>
+              </ul>
+               <ul class="navbar-nav ms-auto">
+                <li class="nav-item text-grey-100 fw-500 font-xssss">
+                  Əlaqə nömrəsi:
+                  <a href="tel:03340005000" class="fw-700 text-white">+994 55-298-09-99</a>
+                </li>
+              </ul> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- search -->
+
+  <div class="header-wrapper d-block d-md-none mb-2">
+    <div class="container-fluid">
+      <div class="row">
+       
+        <div class="col-12 header-search ms-auto me-2" style="margin-top: 80px" >
+          <form action="{% url 'search:search' %}" method="GET" >
+            <div class="input-group search_box">
+              <input type="text" class="form-control rounded-5" placeholder="Məhsul axtarın" name="q" value="{{search}}">
+              <button class="btn btn-primary mx-2 rounded-5" type="submit"><i class="feather-search font-xl text-grey-100 "></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

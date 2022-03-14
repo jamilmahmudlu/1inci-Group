@@ -1,0 +1,73 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block container %}
+ <div class="container">
+  <div class="row">
+    {% for item in product %}
+    <div class = 'col-lg-3 col-md-4 col-6'>
+      <div class="col-lg-12 p-3 rounded-6 border my-3 posr">
+        <a href="#" class="d-block text-center p-2" data-bs-toggle="modal"
+          data-bs-target="#productmodal"><img src="{{ item.productimg.url }}" alt="product-image"
+            class="w-100 mt-1 d-inline-block" /></a>
+
+        <div class="clearfix"></div>
+        <h2 class="mt-2">
+          <a href="{% url 'goldapp:product' id=item.id %}"
+            class="text-yellow fw-600 text-center font-xsss lh-22 d-block ls-0">{{ item.name}}
+            <br />
+           
+
+          </a>
+        </h2>
+        <div class="d-flex flex-row align-items-center mt-5 justify-content-between">
+          <h6 class="font-xsss mb-0 ls-3 fw-700 text-grey-500 ">
+            {{ item.price }}  ₼
+  
+          </h6>
+          <span class=" text-black fw-500 text-yellow font-xsss">{{ item.weight }}kq</span>
+        </div>
+       
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+ </div>
+
+  {% if product|length > 0 %}
+    <div class="d-pagination">
+        <ul class="pagination justify-content-center">
+      {% if product.has_previous %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ product.previous_page_number }}"><i class="feather-chevron-left"></i></a>
+        </li>
+      {% endif %}
+      {% for ord in product.paginator.page_range %}
+        {% if product.number == ord %}
+          <li class="page-item active">
+            <span class="page-link">{{ ord }}
+            </span>
+          </li>
+        {% elif ord > product.number|add:'-3' and ord < product.number|add:'3' %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ ord }}">{{ ord }}</a>
+          </li>
+
+        {% endif %}
+
+      {% endfor %}
+       {% if product.has_next %}
+       
+        <li class="page-item">
+          <a class="page-link" href="?page={{ product.paginator.num_pages }}"><i class="feather-chevron-right"></i></a>
+        </li>
+      {% endif %}
+        </ul>
+    </div>
+    {% else %}
+    <h3 class="text-center mt-5">Məhsul tapılmadı...</h3>
+    {% endif %}	 
+
+{% endblock %}
