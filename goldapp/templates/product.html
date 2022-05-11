@@ -14,26 +14,25 @@
         <div class="col-md-6 mt-3 col-12">
           <div class="product product-details clearfix">
           <div id="product-main-view">
+            {% for rs in images %}
+            <div class="product-view">
+              <img src="{{ rs.productimg.url }}" alt="">
+            </div>
+            {% endfor %}
             <div class="product-view ">
               <img src="{{ product.productimg.url }}" alt="">
             </div>
-            {% for rs in images %}
-            <div class="product-view">
-              <img src="{{ rs.productimg.url }}" alt="">
-            </div>
-            {% endfor %}
 
           </div>
           <div id="product-view">
-            <div class="product-view">
-              <img src="{{ product.productimg.url }}" alt="">
-            </div>
-
             {% for rs in images %}
             <div class="product-view">
               <img src="{{ rs.productimg.url }}" alt="">
             </div>
             {% endfor %}
+            <div class="product-view">
+              <img src="{{ product.productimg.url }}" alt="">
+            </div>
           </div>
         </div>
        
@@ -45,8 +44,7 @@
             <div class="clearfix"></div>
             <p class="font-xssss fw-500 mt-0 text-grey-700 lh-24">{{ product.description }}</p>
             <div class="d-flex flex-row align-items-center mt-5 justify-content-between">
-              <h6 class="font-xss ls-3 fw-700  float-start mt-1">{{ product.weight }}kq</h6>
-                <h6 class="font-xsss ls-3 fw-700 text-grey-600  float-start mt-1 mb-2">{{ product.price }} ₼</h6> 
+                <h3 style="color: red;" class=" ls-3 fw-700   float-start ">{{ product.price }} ₼</h3> 
             </div>
            
           </div>

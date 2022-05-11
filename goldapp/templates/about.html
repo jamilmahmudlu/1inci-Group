@@ -1,19 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html'%}
 {% load static %}
 
-<head>
-  <title>1inci</title>
+  <!-- <title>1inci</title>
   <link rel="icon" type="image/png" sizes="64x64" href="{% static 'images/logo/inci.png'%}" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
   <link rel="stylesheet" href="{% static 'css/style.css'%}" />
-  <style>
+  <link rel="stylesheet" href="{% static 'css/user.css'%}" /> -->
+  <!-- <style>
 
       /* footer */
-      .upper-footer,
+    .upper-footer,
     .lower-footer {
       background: #000;
     }
@@ -149,33 +148,22 @@ font-family: 'Poppins', sans-serif !important;
 .nav-link:focus {
 color: #000;
 }
-  </style>
-</head>
-
+  </style> -->
+<!-- </head>
 <body class="color-theme-yellow mont-font">
   <div class="preloader"></div>
-  <!-- main wrapper  -->
   <div class="main-wrapper bg-lightgrey">
-    <!-- HEADER WRAPPER -->
-    {% include 'bin/header.html' %}
-
-    <!-- about -->
-
-    <h1 class="fw-600 font-xss leter_spacing text-center mt-3">Bizim Haqqımızda</h1>
+    {% include 'bin/header.html' %} -->
+    
+    
+    {% block base %}
+    <!-- <h1 class="fw-600 font-xss leter_spacing text-center mt-3">Bizim Haqqımızda</h1> -->
     <div class="container mb-5">
       <div class="row ">
         <div class="col-md-7 col-12">
-          <h2 class="text-center leter_spacing font-xss mt-5 fw-500 border-bottom pb-3 ">Missiyamız</h2>
-          <li class="text_change">
-            INCI şirkəti olaraq missiyamız, dəyərli müştərilərimizi
-            keyfiyyətli məhsullarla təmin etmək və hər kəsə münasib qiymətlərlə
-            hər kəsə keyfiyyətli məhsullar prinsipi qurmaqdır.
-          </li>
-          <h2 class="text-center leter_spacing font-xss mt-5 fw-500 border-bottom pb-3 ">Məqsədimiz</h2>
-          <li class="text_change">
-
-            Bizim məqsədimiz bazarda sağlam rəqabət mühitinə uyğun olaraq fəaliyyət göstərmək, fəaliyyət sahəmizi hər
-            gün genişləndirmək və məhsullarımızı bütün bölgələrimizdə əlçatımlı etməkdir.
+          <h2 class="text-center leter_spacing font-xss mt-5 fw-500 border-bottom pb-3 ">Bizim Haqqımızda</h2>
+          <li style="color: #000;" class="text_change">
+            1inci Group MMC 2005-ci ildən Azərbaycanın tikinti bazarında fəaliyyət göstərir. Şirkət bir neçə yerli və xarici istehsalçıların rəsmi nümayəndəliyidir. Bundan əlavə peşəkar təmir və tikinti işləri ilə də tanınır. Şirkətin əsas məqsədi fərdi və ya korporativ müştəriləri yüksək keyfiyyətli məhsullarla təmin etməkdir. Bundan əlavə 1inci Group müştərilərə kreditlə tikinti materialları almaqda da yardımçı olur.
           </li>
         </div>
         <div class="col-md-5">
@@ -184,29 +172,20 @@ color: #000;
           </div>
         </div>
       </div>
-
+      
     </div>
+    {% endblock %}
 
-    <!-- Partnyor -->
 
-    <!-- Partnyor -->
-
-    <!-- FOOTER WRAPPER -->
+<!-- 
 
     {%include 'bin/footer.html'%}
-    <!-- FOOTER WRAPPER -->
   </div>
 
-  <!-- MENU MODAL -->
-  {% include 'bin/menu.html' %}
+  {% include 'bin/menu.html' %} -->
 
-  <!-- catagory -->
-  <!--  -->
-  <!--  -->
-  <!-- Catagory -->
-  <script src="{% static 'js/plugin.js' %}"></script>
+  <!-- <script src="{% static 'js/plugin.js' %}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-  <script src="{% static 'js/scripts.js' %}"></script>
-</body>
-
-</html>
+  <script src="{% static 'js/scripts.js' %}"></script> -->
+<!-- </body>
+</html> -->

@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- <!DOCTYPE html>
+<html lang="en"> -->
+  {% extends 'base.html' %}
   {% load static %}
-<head>
+<!-- <head>
   <title>1inci</title>
   <link rel="icon" type="image/png" sizes="64x64"  href="{% static 'images/logo/inci.png'%}" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" /> -->
 
 
 
-  <link rel="stylesheet" href="{% static 'css/style.css'%}" />
-  <style>
+  <!-- <link rel="stylesheet" href="{% static 'css/style.css'%}" /> -->
+  <!-- <style>
     /* footer */
     .upper-footer,
     .lower-footer {
@@ -148,19 +149,15 @@ font-family: 'Poppins', sans-serif !important;
 .nav-link:focus {
 color: #000;
 }
-  </style>
-</head>
+  </style> -->
+<!-- </head>
 
   <body class="color-theme-yellow mont-font">
     <div class="preloader"></div>
-    <!-- main wrapper  -->
     <div class="main-wrapper bg-lightgrey">
-      <!-- HEADER  search-->
-      {% include 'bin/header.html' %}
+      {% include 'bin/header.html' %} -->
       
-      <!-- search -->
-      <!-- Contact -->
-
+      {% block base %}
       <div class="contact-wrapp pt-5 pb-5 mt-md-5 mb-md-3">
         <div class="container">
           <div class="row">
@@ -171,37 +168,26 @@ color: #000;
                     Əlaqə
                   </h6>
                 </div>
+                
                 <form action="" method="post">
-                  {%csrf_token%}
-                  <div class="form-group border mb-3">
-                    <input
-                      type="text"
-                      placeholder="Adı" name="full-name"
-                      class="lh-38 ps-3 font-xssss fw-500 rounded-6 posr border border-light w-100"
-                    />
+                  {% csrf_token %}
+                  <div class="form-group mb-3">
+                    {{form.first_name}}
+                    <div class="text-danger">
+                      {{form.first_name.errors}}
+                    </div>
                   </div>
-                  <div class="form-group border mb-3">
-                    <input
-                      type="text"
-                      placeholder="E-mail" name="email"
-                      class="lh-38 ps-3 font-xssss fw-500 rounded-6 posr border border-light w-100"
-                    />
+                  <div class="form-group mb-3">
+                    {{form.email}}
                   </div>
-                  <div class="form-group mb-3 border">
-                    <input
-                      type="text" name="number"
-                      placeholder="Telfon nömrəsi"
-                      class="lh-38 ps-3 font-xssss fw-500 rounded-6 posr border border-light w-100"
-                    />
+                  <div class="form-group mb-3">
+                    {{form.telephone}}
+                    <div class="text-danger">
+                      {{form.telephone.errors}}
+                    </div>
                   </div>
-                  <div class="form-group border mb-3">
-                    <textarea
-                      name="message" 
-                      class="border-light border font-xssss fw-500 text-grey-600 p-2 rounded-6 ovh w-100 ps-3"
-                      cols="30"
-                      rows="6"
-                      placeholder="Mesaj"
-                    ></textarea>
+                  <div class="form-group mb-3">
+                    {{form.message}}
                   </div>
                   <button type="submit"
                     class="btn btn-outline-warning"
@@ -215,10 +201,10 @@ color: #000;
               <div class="row">
                 <div class="col-sm-6 mb-2 col-md-12">
                   <h1 class="text-center font-xs text-grey-900 fw-700">
-                    Telfon Nömrəsi
+                    Telefon Nömrəsi
                   </h1>
                   <p class="font-xsss text-center text-grey-900">
-                    055-298-09-99
+                    +994 (51) (55) 412 99 99
                   </p>
                 </div>
                 <div class="col-sm-6 col-md-12 mb-2">
@@ -238,19 +224,19 @@ color: #000;
                     href="mailto:goldinshaat@mail.ru"
                     class="font-xsss text-center text-grey-900"
                   >
-                    <p class="text-center">goldinshaat@mail.ru</p>
+                    <p class="text-center">info@1inci.az</p>
                   </a>
                 </div>
                 <div class="col-sm-6 col-md-12 mb-2">
                   <h1 class="text-center font-xs fw-700">Sosial Media</h1>
                   <div class="text-center">
                     <a
-                      href="#"
+                      href="https://www.facebook.com/Inciin%C5%9Faat-289036715277898/"
                       class="btn-round btn-round-md z-index-1 bg-facebook"
                       ><i class="ti-facebook text-white"></i
                     ></a>
                     <a
-                      href="#"
+                      href="https://instagram.com/1inci.az?utm_medium=copy_link"
                       class="btn-round btn-round-md z-index-1 bg-instagram"
                       ><i class="ti-instagram text-white"></i
                     ></a>
@@ -261,23 +247,18 @@ color: #000;
           </div>
         </div>
       </div>
+      {% endblock %}
 
-      <!-- Contact -->
 
-      <!-- FOOTER WRAPPER -->
-
-      {%include 'bin/footer.html'%}
+      <!-- {%include 'bin/footer.html'%} -->
    
-      <!-- FOOTER WRAPPER -->
-    </div>
-    <!-- menu Modal -->
-    {% include 'bin/menu.html' %}
+    <!-- {% include 'bin/menu.html' %} -->
 
   
-
+<!-- 
     <script src="{% static 'js/plugin.js' %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-    <script src="{% static 'js/scripts.js' %}"></script>
-  </body>
+    <script src="{% static 'js/scripts.js' %}"></script> -->
+  <!-- </body>
   
-  </html>
+  </html> -->

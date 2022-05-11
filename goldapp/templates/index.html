@@ -1,7 +1,7 @@
 
 {% extends 'base.html' %}
 {% load static %}
-{% block slider %}
+{% block base %}
     <!-- BANNER WRAPPER -->
     <div class="banner-wrapper">
       <div class="container-fluid">
@@ -22,9 +22,7 @@
       </div>
     </div>
     <!-- BANNER WRAPPER -->
-{% endblock %}
 <!-- Mehsullar -->
-{% block container %}
 
 
 
@@ -40,25 +38,35 @@
     <div class = 'col-lg-3 col-md-4 col-6'>
       <div class="col-lg-12 p-3 rounded-6 border my-3 posr">
         <a href="#" class="d-block text-center" data-bs-toggle="modal"
-          data-bs-target="#productmodal"><img src="{{ item.productimg.url }}" alt="product-image"
+          data-bs-target="#productmodal"><img style="height: 200px;" src="{{ item.productimg.url }}" alt="product-image"
             class="w-100 mt-1 rounded_img d-inline-block" /></a>
 
         <div class="clearfix"></div>
-        <h2 class="mt-2">
+        <div style="margin-top: 20px; height: 70px;">
+        <h2 style="text-align: center;" >
           <a href="{% url 'goldapp:product' id=item.id %}"
-            class="text-yellow item-name p-start-2 fw-600 font-xss lh-22 d-block ls-0">{{ item.name}}
+            class="text-yellow item-name fw-600 lh-22  ls-0">{{ item.name}}
             <br />
            
 
           </a>
         </h2>
-        <div class="d-flex flex-row align-items-center mt-5 justify-content-between">
-          <h6 class="font-xsss mb-0 ls-3 fw-700 text-grey-500 ">
-            {{ item.price }}  ₼
+      </div>
+      {% if item.is_concrete %}
+        <div style="margin-top: 50px;" class="d-flex flex-row align-items-center justify-content-center">
+          <h2 style="color: red; text-align: center;" class=" mb-0 ls-3 fw-700 ">
+            {{ item.price }}  ₼ <span style="color: grey; font-size: 15px;">- dan</span>  
             
-          </h6>
-          <span class=" text-black fw-500 text-yellow font-xsss">{{ item.weight }}kq</span>
+          </h2>
         </div>
+        {% else %}
+        <div style="margin-top: 50px;" class="d-flex flex-row align-items-center justify-content-center">
+          <h2 style="color: red; text-align: center;" class=" mb-0 ls-3 fw-700 ">
+            {{ item.price }}  ₼  
+            
+          </h2>
+        </div>
+        {% endif %}
        
       </div>
     </div>
@@ -99,13 +107,28 @@
     {% else %}
     <h3 class="text-center mt-5">Məhsul tapılmadı...</h3>
     {% endif %}	 	 
+<br><br>
+    <div class="banner-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 m-0 p-0">
+            <div
+              class="owl-carousel slider-banner banner-wrap owl-theme ovh m-0 p-0 nav-none owl-arrow-center arrow-container">
+            	{% for prsld in prod_slide %}
+              <div class="item rounded-0  bg-image-cover ovh style1 d-flex justify-content-start" style="
+                    background-image: url({{prsld.prodslideimg.url}})
+                  ">
+               <div  style="margin:100px;"></div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-{% endblock %}
 
-
-{% block partnyor %}
 <!-- BANNER WRAPPER -->
-
 <div class="container">
   <div class="row">
     <h1 class="font-xs text-center my-5">Bizim Partnyorlarımız</h1>
@@ -119,6 +142,5 @@
   </div>
 
 </div>
-
-
 {% endblock %}
+

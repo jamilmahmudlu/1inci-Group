@@ -7,12 +7,11 @@ def search(request):
 	products = Product.objects.all()
 	if search:
 		products = products.filter(
-			Q(name__icontains=search)
-
+			Q(slug__icontains=search) | Q(name__icontains=search)
 		)
-	paginator = Paginator(products, 8)
-	page = request.GET.get('page')
-	products = paginator.get_page(page)
+	# paginator = Paginator(products, 8)
+	# page = request.GET.get('page')
+	# products = paginator.get_page(page)
 	context = {
 		"product": products,
 		"search": search,

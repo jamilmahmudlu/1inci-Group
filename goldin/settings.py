@@ -27,8 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'goldapp',
-    'search'
-
+    'search',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -70,10 +70,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'incidb', 
-        'USER': 'postgres', 
-        'PASSWORD': 'abdul@2005',
-        'HOST': '127.0.0.1', 
-        'PORT': '5432',
+        'USER': 'inciuser', 
+        'PASSWORD': 'DZrxSGDEwi',
+        'HOST': 'localhost', 
+        'PORT': 5432,
     }
 }
 # Password validation
@@ -110,8 +110,8 @@ USE_TZ = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = False
-EMAIL_HOST_USER = 'iamabdulhasan9@gmail.com'
-EMAIL_HOST_PASSWORD = '*********'
+EMAIL_HOST_USER = 'jamilmahmudlu@gmail.com'
+EMAIL_HOST_PASSWORD = 'Jm18921905'
 EMAIL_PORT = '587'
 
 # Static files (CSS, JavaScript, Images)
@@ -128,3 +128,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'files/')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# REST_FRAMEWORK = {
+#     # Use Django's standard `django.contrib.auth` permissions,
+#     # or allow read-only access for unauthenticated users.
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+#     ],
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'rest_framework_simplejwt.authentication.JWTAuthentication',
+#     )
+# }
+
+AUTH_USER_MODEL = 'users.User'
