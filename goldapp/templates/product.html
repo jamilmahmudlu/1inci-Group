@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block container %}
+
+
+<!-- section -->
+<div class="section">
+  <!-- container -->
+  <div class="container">
+    <!-- row -->
+    <div class="row">
+      <!--  Product Details -->
+     
+        <div class="col-md-6 mt-3 col-12">
+          <div class="product product-details clearfix">
+          <div id="product-main-view">
+            {% for rs in images %}
+            <div class="product-view">
+              <img src="{{ rs.productimg.url }}" alt="">
+            </div>
+            {% endfor %}
+            <div class="product-view ">
+              <img src="{{ product.productimg.url }}" alt="">
+            </div>
+
+          </div>
+          <div id="product-view">
+            {% for rs in images %}
+            <div class="product-view">
+              <img src="{{ rs.productimg.url }}" alt="">
+            </div>
+            {% endfor %}
+            <div class="product-view">
+              <img src="{{ product.productimg.url }}" alt="">
+            </div>
+          </div>
+        </div>
+       
+        </div>
+        <div class="col-md-6 mt-3 col-12">
+          <div class="product-card ">
+            <h2 class="fw-700  font-xs ls-0 mt-2 tag-name lh-3">{{ product.name }}</h2>
+      
+            <div class="clearfix"></div>
+            <p class="font-xssss fw-500 mt-0 text-grey-700 lh-24">{{ product.description }}</p>
+            <div class="d-flex flex-row align-items-center mt-5 justify-content-between">
+                <h3 style="color: red;" class=" ls-3 fw-700   float-start ">{{ product.price }} ₼</h3> 
+            </div>
+           
+          </div>
+      <!-- /Product Details -->
+    </div>
+  
+  </div>
+ 
+    <!-- /row -->
+  </div>
+  <!-- /container -->
+</div>
+<!-- /section -->
+
+{% endblock %}
+
