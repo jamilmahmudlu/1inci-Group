@@ -112,3 +112,15 @@ class ContactUs(models.Model):
 	def __str__(self):
 		return self.first_name
 
+class Newmodel(models.Model):
+	title = models.CharField(max_length=150, verbose_name="Title")
+	created = models.DateTimeField(auto_now_add=True)
+	updated = models.DateTimeField(auto_now=True)
+	newimg = models.FileField(upload_to = "newimg/", verbose_name="New Image")
+
+	verbose_name = "New"
+	verbose_name_plural = "New"
+
+	def __str__(self):
+		return self.title
+

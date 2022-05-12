@@ -72,7 +72,7 @@ DATABASES = {
         'NAME': 'incidb', 
         'USER': 'inciuser', 
         'PASSWORD': 'DZrxSGDEwi',
-        'HOST': 'localhost', 
+        'HOST': os.environ.get('POSTGRES_HOST', 'localhost'), 
         'PORT': 5432,
     }
 }
