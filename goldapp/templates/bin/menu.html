@@ -24,6 +24,21 @@
               <li class="nav-item active">
                 <a class="nav-link" href="{% url 'goldapp:contact' %}" aria-expanded="false">Əlaqə</a>
               </li>
+              {% if request.user.is_authenticated %}
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'register' %}" aria-expanded="false">{{user.first_name}}</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" style="color: red;" href="{% url 'logout' %}" aria-expanded="false">Çıxış</a>
+              </li>
+              {% else %}
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'register' %}" aria-expanded="false">Qeydiyyat</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'login' %}" aria-expanded="false">Giriş</a>
+              </li>
+              {% endif %}
             </ul>
           </div>
         </div>

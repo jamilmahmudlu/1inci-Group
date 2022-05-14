@@ -66,7 +66,8 @@ class Product(models.Model):
 	updated = models.DateTimeField(auto_now=True)
 	status = models.IntegerField(default=0)
 	description = models.TextField(blank=True, verbose_name='Description')
-	is_concrete = models.BooleanField(verbose_name='Concrete', default=False)
+	is_approximate = models.BooleanField(verbose_name='Approximate', default=False)
+	is_mainpage = models.BooleanField(verbose_name='Main page', default=False)
 
 	class Meta:
 		verbose_name = "Product"
@@ -112,15 +113,4 @@ class ContactUs(models.Model):
 	def __str__(self):
 		return self.first_name
 
-class Newmodel(models.Model):
-	title = models.CharField(max_length=150, verbose_name="Title")
-	created = models.DateTimeField(auto_now_add=True)
-	updated = models.DateTimeField(auto_now=True)
-	newimg = models.FileField(upload_to = "newimg/", verbose_name="New Image")
-
-	verbose_name = "New"
-	verbose_name_plural = "New"
-
-	def __str__(self):
-		return self.title
 
