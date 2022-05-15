@@ -10,7 +10,6 @@ def index(request):
     mainproducts = Product.objects.filter(is_mainpage=True)
     dateproducts = Product.objects.order_by('-id')[:8]
     slide=Slider.objects.all()
-    prod_slide = ProductSlider.objects.all()
     # paginator=Paginator(mainproducts,1)
     page=request.GET.get('page')
     # newproducts=paginator.get_page(page)
@@ -19,7 +18,6 @@ def index(request):
         'dateproduct':dateproducts,
         "mainproduct":mainproducts,
         "slide":slide,
-        "prod_slide":prod_slide,
         "partnyor":partnyor
     }
     return render(request, 'index.html',context)
@@ -28,9 +26,11 @@ def allproducts(request):
     products_ = Product.objects.all()
     paginator = Paginator(products_, 20)
     page = request.GET.get('page')
+    prod_slide = ProductSlider.objects.all()
     products = paginator.get_page(page)
     context = {
         'product':products,
+        "prod_slide":prod_slide,
     }
     return render(request, "allproducts.html", context=context)
 # About
