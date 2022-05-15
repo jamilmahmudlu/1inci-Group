@@ -30,11 +30,11 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12 mt-5">
-      <h4 class="fw-700 font-xs text-center mb-5 mt-5">
-        Məhsullar
-      </h4>
+      <h3 class="fw-700 font-xs text-center mb-5 mt-5">
+        Önə çıxan məhsullar
+      </h3>
     </div>
-    {% for item in newproduct %}
+    {% for item in mainproduct %}
     <div class = 'col-lg-3 col-md-4 col-6'>
       <div class="col-lg-12 p-3 rounded-6 border my-3 posr">
         <a href="#" class="d-block text-center" data-bs-toggle="modal"
@@ -52,7 +52,7 @@
           </a>
         </h2>
       </div>
-      {% if item.is_concrete %}
+      {% if item.is_approximate %}
         <div style="margin-top: 80px;" class="d-flex flex-row align-items-center justify-content-center">
           <h2 style="color: red; text-align: center;" class=" mb-0 ls-3 fw-700 ">
             {{ item.price }}  ₼ <span style="color: grey; font-size: 15px;">- dan</span>  
@@ -72,9 +72,57 @@
     </div>
     {% endfor %}
 
+    <hr style="margin-top: 30px;">
+
+    <div class="col-lg-12 mt-1">
+      <h3 class="fw-700 font-xs text-center mb-5 mt-5">
+        Ən son əlavə edilən məhsullar
+      </h3>
+    </div>
+    {% for item in dateproduct %}
+    <div class = 'col-lg-3 col-md-4 col-6'>
+      <div class="col-lg-12 p-3 rounded-6 border my-3 posr">
+        <a href="#" class="d-block text-center" data-bs-toggle="modal"
+          data-bs-target="#productmodal"><img style="height: 200px;" src="{{ item.productimg.url }}" alt="product-image"
+            class="w-100 mt-1 rounded_img d-inline-block" /></a>
+
+        <div class="clearfix"></div>
+        <div style="margin-top: 20px; height: 70px;">
+        <h2 style="text-align: center;" >
+          <a href="{% url 'goldapp:product' id=item.id %}"
+            class="text-yellow item-name fw-600 lh-22  ls-0">{{ item.name}}
+            <br />
+           
+
+          </a>
+        </h2>
+      </div>
+      {% if item.is_approximate %}
+        <div style="margin-top: 80px;" class="d-flex flex-row align-items-center justify-content-center">
+          <h2 style="color: red; text-align: center;" class=" mb-0 ls-3 fw-700 ">
+            {{ item.price }}  ₼ <span style="color: grey; font-size: 15px;">- dan</span>  
+            
+          </h2>
+        </div>
+        {% else %}
+        <div style="margin-top: 80px;" class="d-flex flex-row align-items-center justify-content-center">
+          <h2 style="color: #FF0000; text-align: center;" class=" mb-0 ls-3 fw-700 ">
+            {{ item.price }}  ₼  
+            
+          </h2>
+        </div>
+        {% endif %}
+       
+      </div>
+    </div>
+    {% endfor %}
+
+    <hr style="margin-top: 30px;">
+    <a style="font-size: x-large; text-decoration: underline; color: red;" class="fw-700 text-center mb-3 mt-3" href="{% url 'goldapp:allproducts' %}">Bütün məhsullara baxın</a>
+    <hr style="margin-top: 30px;">
   </div>
  </div>
- {% if newproduct|length > 0 %}
+ <!-- {% if newproduct|length > 0 %}
     <div class="d-pagination">
         <ul class="pagination justify-content-center">
       {% if newproduct.has_previous %}
@@ -106,7 +154,7 @@
     </div>
     {% else %}
     <h3 class="text-center mt-5">Məhsul tapılmadı...</h3>
-    {% endif %}	 	 
+    {% endif %}	 	  -->
 <br><br>
     <div class="banner-wrapper">
       <div class="container-fluid">

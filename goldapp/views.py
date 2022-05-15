@@ -7,20 +7,32 @@ from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.http import HttpResponse
 # Create your views here.
 def index(request):
-    newproducts_ = Product.objects.all()
+    mainproducts = Product.objects.filter(is_mainpage=True)
+    dateproducts = Product.objects.order_by('-id')[:8]
     slide=Slider.objects.all()
     prod_slide = ProductSlider.objects.all()
-    paginator=Paginator(newproducts_,12)
+    # paginator=Paginator(mainproducts,1)
     page=request.GET.get('page')
-    newproducts=paginator.get_page(page)
+    # newproducts=paginator.get_page(page)
     partnyor=Partnyor.objects.all()
     context={
-        "newproduct":newproducts,
+        'dateproduct':dateproducts,
+        "mainproduct":mainproducts,
         "slide":slide,
         "prod_slide":prod_slide,
         "partnyor":partnyor
     }
     return render(request, 'index.html',context)
+
+def allproducts(request):
+    products_ = Product.objects.all()
+    paginator = Paginator(products_, 20)
+    page = request.GET.get('page')
+    products = paginator.get_page(page)
+    context = {
+        'product':products,
+    }
+    return render(request, "allproducts.html", context=context)
 # About
 def about(request):
 
