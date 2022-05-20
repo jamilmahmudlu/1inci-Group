@@ -113,4 +113,13 @@ class ContactUs(models.Model):
 	def __str__(self):
 		return self.first_name
 
+class Faq(models.Model):
+	question = models.TextField(verbose_name='Question')
+	answer = models.TextField(verbose_name='Answer')
+	is_mainpage = models.BooleanField(verbose_name='Main page', default=False)
 
+	verbose_name = 'FAQ'
+	verbose_name = 'FAQS'
+
+	def __str__(self):
+		return self.question

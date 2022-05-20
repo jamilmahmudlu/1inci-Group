@@ -19,13 +19,16 @@
 
              
               <li class="nav-item active">
+                <a class="nav-link" href="{% url 'goldapp:allproducts' %}" aria-expanded="false">Məhsullar</a>
+              </li>
+              <li class="nav-item active">
                 <a class="nav-link" href="{% url 'goldapp:about' %}" aria-expanded="false">Biz Kimik</a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="{% url 'goldapp:contact' %}" aria-expanded="false">Əlaqə</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="{% url 'goldapp:allproducts' %}" aria-expanded="false">Məhsullar</a>
+                <a class="nav-link" href="{% url 'goldapp:faq' %}" aria-expanded="false">Suallar</a>
               </li>
               {% if request.user.is_authenticated %}
               <li class="nav-item active">

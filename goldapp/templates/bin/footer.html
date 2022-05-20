@@ -4,11 +4,20 @@
     <div class="row">
       <div class="col-md-4 site_map col-xs-6 sm-mb-3">
         <h3>Sayt xəritəsi</h3>
-        <ul class="menu ">
-          <li><a href="{% url 'goldapp:index' %}">Ana səhifə</a></li>
+        <ul class="col-md-6 menu ">
+          <li><a href="{% url 'goldapp:index' %}">Ana səhifə</a>
+          <a style="margin-left: 23px;" href="{% url 'goldapp:index' %}">Ödəmə</a>
+          </li>
+          <li><a href="{% url 'goldapp:allproducts' %}">Məhsullar</a>
+          <a style="margin-left: 27px;" href="{% url 'goldapp:index' %}">Çatdırılma</a>
+          </li>
+          <li><a href="{% url 'goldapp:contact' %}">Əlaqə</a>
+          <a style="margin-left: 54px;" href="{% url 'goldapp:index' %}">Suallar</a>
+          </li>
+          </li>
           <li><a href="{% url 'goldapp:about' %}">Biz kimik</a></li>
-          <li><a href="{% url 'goldapp:contact' %}">Əlaqə</a></li>
         </ul>
+
       </div>
       <div class="col-md-4 us_contact col-xs-6 sm-mb-3">
         <h3>Bizimlə əlaqə</h3>

@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block base %}
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+.accordion .contentbx .label::before {
+    font-size: 1rem;
+    color: white;
+}
+
+.faqsection {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* text-align: center; */
+  /* margin-top: 20px; */
+  /* margin-bottom: 40px; */
+  margin: 0 auto;
+  /* padding: 15px; */
+  font-family: " Roboto ", sans-serif;
+  color: white;
+  border-radius: 10px;
+}
+/* .faqsection .accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1000px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: auto;
+  background-color: #EF0E52;
+  border-radius: 10px;
+  padding: 20px;
+} */
+
+.accordion{
+  width: 100%;
+}
+
+.accordion h2 {
+  text-align: center;
+}
+
+.accordion .contentbx {
+  margin: 10px 20px;
+  position: relative;
+}
+
+.accordion .contentbx .label {
+  position: relative;
+  padding: 15px;
+  font-size: large;
+  background: #FC0100;
+  color: white;
+  cursor: pointer;
+}
+
+.accordion .contentbx .label::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: white;
+}
+
+.accordion .contentbx.active .label::before {
+  content: "-";
+}
+
+.accordion .contentbx .content {
+  position: relative;
+  background: white;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  overflow-y: auto;
+  font-size: large;
+  color: black;
+}
+
+.accordion .contentbx.active .content {
+  height: max-content;
+  padding: 10px;
+}/*# sourceMappingURL=contact.css.map */
+</style>
+
+<h1 class="fw-700 text-center mb-5 mt-5">
+  <i class="fa-solid fa-circle-question"></i>
+    <span style="margin-left: 15px;"></span> Tez-tez soruşulan suallar
+  </h1>
+  {% for faq in faqs %}
+  <section class="faqsection">
+    <div class="accordion">
+      <div class="contentbx">
+        <div class="label">
+          <div style="width: 95%;" class="questiontext">
+            {{faq.question}}
+          </div>
+         </div>
+        <div class="content">
+          <p>
+             {{faq.answer}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+  <script>
+    const accordion = document.getElementsByClassName("contentbx");
+    for (i = 0; i < accordion.length; i++) {
+      accordion[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+      });
+    }
+  </script>
+
+{% endblock %}

@@ -5,6 +5,8 @@ from .forms import *
 from django.core.mail import send_mail
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.http import HttpResponse
+
+
 # Create your views here.
 def index(request):
     mainproducts = Product.objects.filter(is_mainpage=True)
@@ -18,9 +20,10 @@ def index(request):
         'dateproduct':dateproducts,
         "mainproduct":mainproducts,
         "slide":slide,
-        "partnyor":partnyor
+        "partnyor":partnyor,
     }
     return render(request, 'index.html',context)
+
 
 def allproducts(request):
     products_ = Product.objects.all()
@@ -33,22 +36,13 @@ def allproducts(request):
         "prod_slide":prod_slide,
     }
     return render(request, "allproducts.html", context=context)
-# About
+
+
 def about(request):
 
     return render(request, 'about.html')
-# Contact
-# def contact(request):
-#     return render(request, 'contact.html')
-# def get_product(request,id):
-#     product = get_object_or_404(Product, id=id) 
-#     rproduct = Product.objects.filter(category_id=product.category.id)
-#     page = request.GET.get('page')
-#     context = {
-#         "product":product,
-#         "rproduct": rproduct,
-#     }
-#     return render(request, "product.html", context)
+
+
 def get_product(request,id):
     category = Category.objects.all()
     product = Product.objects.get(pk=id)
@@ -83,7 +77,6 @@ def get_product_category(request, id):
     return render(request, "category.html", {"product":product})
 
 
-
 def contact(request):
 
     if request.method == "POST":
@@ -104,29 +97,17 @@ def contact(request):
     return render(request, "contact.html", context=context)
 
 
-# email
+def faq(request):
+    faqs = Faq.objects.all()
+    context ={
+        'faqs': faqs
+    }
+    return render(request, "faq.html", context)
 
-# def contact(request):
-#     if request.method == 'POST':
-#         name = request.POST.get('full-name')
-#         email = request.POST.get('email')
-#         number = request.POST.get('number')
-#         message = request.POST.get('message')
-#         data = {
-#             'name': name,
-#             'email': email,
-#             'number': number,
-#             'message': message
-#         }
-#         message = '''
-#           Yeni Message: {}
 
-#           From: {}
-#           Nömrə: {}
-          
-#           '''.format(data['message'],data['email'],data['number'])
+def checkout(request):
+    return render(request, 'checkout.html')
 
-#         send_mail(data['name'] ,message, '', ['jamilmahmudlu@gmail.com'])
-#         return render(request,'contact.html')
-#     return render(request, 'contact.html', {})
 
+def delivery(request):
+    return render(request, 'delivery.html')
