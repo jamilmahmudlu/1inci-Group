@@ -22,17 +22,24 @@
                 <a class="nav-link" href="{% url 'goldapp:allproducts' %}" aria-expanded="false">Məhsullar</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="{% url 'goldapp:about' %}" aria-expanded="false">Biz Kimik</a>
+                <a class="nav-link" href="{% url 'goldapp:contact' %}" aria-expanded="false">Əlaqə</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="{% url 'goldapp:contact' %}" aria-expanded="false">Əlaqə</a>
+                <a class="nav-link" href="{% url 'goldapp:checkout' %}" aria-expanded="false">Ödəmə</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'goldapp:delivery' %}" aria-expanded="false">Çatdırılma</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'goldapp:about' %}" aria-expanded="false">Biz Kimik</a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="{% url 'goldapp:faq' %}" aria-expanded="false">Suallar</a>
               </li>
               {% if request.user.is_authenticated %}
               <li class="nav-item active">
-                <a class="nav-link" href="{% url 'register' %}" aria-expanded="false">{{user.first_name}}</a>
+                <i class="fa-solid fa-user"></i>
+                <a style="color: rgb(30, 154, 141);margin-left: 5px;" class="" href="{% url 'goldapp:index' %}" aria-expanded="false">{{user.first_name}}</a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" style="color: red;" href="{% url 'logout' %}" aria-expanded="false">Çıxış</a>
