@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 
+{%block title %}{% translate 'Suallar' %}{% endblock %}
 {% block base %}
 <style>
     @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
@@ -94,7 +95,7 @@
 
 <h1 class="fw-700 text-center mb-5 mt-5">
   <i class="fa-solid fa-circle-question"></i>
-    <span style="margin-left: 15px;"></span> Tez-tez soruşulan suallar
+    <span style="margin-left: 15px;"></span> {% translate 'Tez-tez soruşulan suallar' %}
   </h1>
   {% for faq in faqs %}
   <section class="faqsection">

@@ -1,5 +1,5 @@
   <!-- MENU MODAL -->
-  {% load static %}
+  {% load static i18n %}
   <div class="modal fade left modal-scrollable" id="menumodal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content theme-dark-bg p-0 border-0 rounded-0">
@@ -13,28 +13,28 @@
             </h4>
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="{% url 'goldapp:index' %}" aria-expanded="false">Ana səhifə
+                <a class="nav-link" href="{% url 'goldapp:index' %}" aria-expanded="false">{% translate 'Ana səhifə' %}
                 </a>
               </li>
 
              
               <li class="nav-item active">
-                <a class="nav-link" href="{% url 'goldapp:allproducts' %}" aria-expanded="false">Məhsullar</a>
+                <a class="nav-link" href="{% url 'goldapp:allproducts' %}" aria-expanded="false">{% translate 'Məhsullar' %}</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="{% url 'goldapp:contact' %}" aria-expanded="false">Əlaqə</a>
+                <a class="nav-link" href="{% url 'goldapp:contact' %}" aria-expanded="false">{% translate 'Əlaqə' %}</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="{% url 'goldapp:checkout' %}" aria-expanded="false">Ödəmə</a>
+                <a class="nav-link" href="{% url 'goldapp:checkout' %}" aria-expanded="false">{% translate 'Ödəmə' %}</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="{% url 'goldapp:delivery' %}" aria-expanded="false">Çatdırılma</a>
+                <a class="nav-link" href="{% url 'goldapp:delivery' %}" aria-expanded="false">{% translate 'Çatdırılma' %}</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="{% url 'goldapp:about' %}" aria-expanded="false">Haqqımızda</a>
+                <a class="nav-link" href="{% url 'goldapp:about' %}" aria-expanded="false">{% translate 'Haqqımızda' %}</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="{% url 'goldapp:faq' %}" aria-expanded="false">Suallar</a>
+                <a class="nav-link" href="{% url 'goldapp:faq' %}" aria-expanded="false">{% translate 'Suallar' %}</a>
               </li>
               <li style="position: absolute; bottom: 0; left: 0;" class="nav-item active">
                 <a style="color: #010107;" role="button" href="{% url 'goldapp:set_language'%}?lang=default&next={{request.path}}"><img style="margin-left: 10px; width: 30px; margin-top: -2px;" src="{% static 'images/azerbaijan-flag-png-xl.png' %}" alt="">
@@ -52,14 +52,14 @@
                 <a style="color: rgb(30, 154, 141);margin-left: 5px;" class="" href="{% url 'goldapp:index' %}" aria-expanded="false">{{user.first_name}}</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" style="color: red;" href="{% url 'logout' %}" aria-expanded="false">Çıxış</a>
+                <a class="nav-link" style="color: red;" href="{% url 'logout' %}" aria-expanded="false">{% translate 'Çıxış' %}</a>
               </li>
               {% else %}
               <li class="nav-item active">
-                <a class="nav-link" href="{% url 'register' %}" aria-expanded="false">Qeydiyyat</a>
+                <a class="nav-link" href="{% url 'register' %}" aria-expanded="false">{% translate 'Qeydiyyat' %}</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="{% url 'login' %}" aria-expanded="false">Giriş</a>
+                <a class="nav-link" href="{% url 'login' %}" aria-expanded="false">{% translate 'Giriş' %}</a>
               </li>
               {% endif %}
             </ul>
@@ -78,7 +78,7 @@
         <div class="modal-body rounded-0 border-0 vw100 text-start  p-0">
           <div class="card card-change p-4 border-0 text-start">
             <h4 class="fw-700 text-grey-900 text-start mb-3 mt-n2 font-xs font-catagory d-block ls-0">
-              Kateqoriyalar
+              {% translate 'Kateqoriyalar' %}
             </h4>
             <ul class="ms-0 ps-0 rounded-0 border-0 mt-3">
            

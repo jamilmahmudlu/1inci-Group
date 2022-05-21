@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
+
+{% block title %}{% translate 'Məhsullar' %}{% endblock %}
 {% block base %}
+
 <style>
   .carousel-control-next,
 .carousel-control-prev /*, .carousel-indicators */ {
@@ -49,7 +52,7 @@
     <div class="row">
       <div class="col-lg-12 mt-1">
         <h2 class="fw-700 text-center mb-5 mt-5">
-          Bütün məhsullar
+          {% translate 'Bütün məhsullar' %}
         </h2>
       </div>
       {% for item in product %}

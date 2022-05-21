@@ -1,7 +1,9 @@
 <!-- <!DOCTYPE html>
 <html lang="en"> -->
   {% extends 'base.html' %}
-  {% load static %}
+  {% load static i18n %}
+
+  {%block title %}{% translate 'Əlaqə' %}{% endblock %}
 <!-- <head>
   <title>1inci</title>
   <link rel="icon" type="image/png" sizes="64x64"  href="{% static 'images/logo/inci.png'%}" />

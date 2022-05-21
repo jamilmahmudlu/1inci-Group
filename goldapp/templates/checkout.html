@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 
+{%block title %}{% translate 'Ödəmə' %}{% endblock %}
 {% block base %}
 <h1 class="fw-700 text-center mb-5 mt-5">
-      Tezliklə məlumatlar yüklənəcək...
+      {% translate 'Tezliklə məlumatlar yüklənəcək...' %}
     </h1>
 {% endblock %}

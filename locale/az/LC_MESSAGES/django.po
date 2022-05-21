@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-21 09:47+0000\n"
+"POT-Creation-Date: 2022-05-21 17:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,8 +18,94 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: goldapp/templates/bin/header.html:70 goldapp/templates/bin/header.html:119
+#: goldapp/templates/about.html:4 goldapp/templates/bin/footer.html:18
+#: goldapp/templates/bin/header.html:131 goldapp/templates/bin/menu.html:34
+msgid "Haqqımızda"
+msgstr ""
+
+#: goldapp/templates/about.html:165
+msgid "Biz Kimik ?"
+msgstr ""
+
+#: goldapp/templates/about.html:167
+msgid ""
+"1inci Group MMC 2005-ci ildən Azərbaycanın tikinti bazarında fəaliyyət "
+"göstərir. Şirkət bir neçə yerli və xarici istehsalçıların rəsmi "
+"nümayəndəliyidir. Bundan əlavə peşəkar təmir və tikinti işləri ilə də "
+"tanınır. Şirkətin əsas məqsədi fərdi və ya korporativ müştəriləri yüksək "
+"keyfiyyətli məhsullarla təmin etməkdir. Bundan əlavə 1inci Group müştərilərə "
+"kreditlə tikinti materialları almaqda da yardımçı olur."
+msgstr ""
+
+#: goldapp/templates/allproducts.html:4 goldapp/templates/bin/footer.html:11
+#: goldapp/templates/bin/header.html:115 goldapp/templates/bin/menu.html:22
+msgid "Məhsullar"
+msgstr ""
+
+#: goldapp/templates/allproducts.html:55
+msgid "Bütün məhsullar"
+msgstr ""
+
+#: goldapp/templates/bin/footer.html:6
+msgid "Sayt xəritəsi"
+msgstr ""
+
+#: goldapp/templates/bin/footer.html:8 goldapp/templates/bin/header.html:110
+#: goldapp/templates/bin/menu.html:16 goldapp/templates/index.html:5
+msgid "Ana səhifə"
+msgstr ""
+
+#: goldapp/templates/bin/footer.html:9 goldapp/templates/bin/header.html:122
+#: goldapp/templates/bin/menu.html:28 goldapp/templates/checkout.html:4
+msgid "Ödəmə"
+msgstr ""
+
+#: goldapp/templates/bin/footer.html:12 goldapp/templates/bin/header.html:126
+#: goldapp/templates/bin/menu.html:31 goldapp/templates/delivery.html:4
+msgid "Çatdırılma"
+msgstr ""
+
+#: goldapp/templates/bin/footer.html:14 goldapp/templates/bin/header.html:70
+#: goldapp/templates/bin/header.html:119 goldapp/templates/bin/menu.html:25
+#: goldapp/templates/contact.html:6
 msgid "Əlaqə"
+msgstr ""
+
+#: goldapp/templates/bin/footer.html:15 goldapp/templates/bin/header.html:134
+#: goldapp/templates/bin/menu.html:37 goldapp/templates/faq.html:4
+msgid "Suallar"
+msgstr ""
+
+#: goldapp/templates/bin/footer.html:23
+msgid "Bizimlə Əlaqə"
+msgstr ""
+
+#: goldapp/templates/bin/footer.html:26
+msgid "Telefon nömrəsi"
+msgstr ""
+
+#: goldapp/templates/bin/footer.html:28
+msgid "Mail ünvanı"
+msgstr ""
+
+#: goldapp/templates/bin/footer.html:32
+msgid "Ünvan: Dərnəgül şossesi, Ziya Bünyadov 2113"
+msgstr ""
+
+#: goldapp/templates/bin/footer.html:36
+msgid "Sosial Media"
+msgstr ""
+
+#: goldapp/templates/bin/footer.html:54
+msgid "Müəllif hüquqları © 2022 DigiMedia Agency. Bütün hüquqlar qorunur."
+msgstr ""
+
+#: goldapp/templates/bin/header.html:15
+msgid "Menyu"
+msgstr ""
+
+#: goldapp/templates/bin/header.html:36 goldapp/templates/bin/menu.html:81
+msgid "Kateqoriyalar"
 msgstr ""
 
 #: goldapp/templates/bin/header.html:72
@@ -34,40 +120,54 @@ msgstr ""
 msgid "Bütün kateqoriyalar"
 msgstr ""
 
-#: goldapp/templates/bin/header.html:110 goldapp/templates/index.html:4
-msgid "Ana səhifə"
-msgstr ""
-
-#: goldapp/templates/bin/header.html:115
-msgid "Məhsullar"
-msgstr ""
-
-#: goldapp/templates/bin/header.html:122
-msgid "Ödəmə"
-msgstr ""
-
-#: goldapp/templates/bin/header.html:126
-msgid "Çatdırılma"
-msgstr ""
-
-#: goldapp/templates/bin/header.html:131
-msgid "Haqqımızda"
-msgstr ""
-
-#: goldapp/templates/bin/header.html:134
-msgid "Suallar"
-msgstr ""
-
-#: goldapp/templates/bin/header.html:143
+#: goldapp/templates/bin/header.html:143 goldapp/templates/bin/menu.html:55
 msgid "Çıxış"
 msgstr ""
 
-#: goldapp/templates/bin/header.html:147
+#: goldapp/templates/bin/header.html:147 goldapp/templates/bin/menu.html:59
+#: users/templates/register.html:4
 msgid "Qeydiyyat"
 msgstr ""
 
-#: goldapp/templates/bin/header.html:149
+#: goldapp/templates/bin/header.html:149 goldapp/templates/bin/menu.html:62
+#: users/templates/login.html:4
 msgid "Giriş"
+msgstr ""
+
+#: goldapp/templates/category.html:5
+msgid "Filterlənmiş məhsullar"
+msgstr ""
+
+#: goldapp/templates/category.html:81
+msgid "Məhsul tapılmadı..."
+msgstr ""
+
+#: goldapp/templates/checkout.html:7 goldapp/templates/delivery.html:7
+msgid "Tezliklə məlumatlar yüklənəcək..."
+msgstr ""
+
+#: goldapp/templates/faq.html:98
+msgid "Tez-tez soruşulan suallar"
+msgstr ""
+
+#: goldapp/templates/index.html:137
+msgid "Önə çıxan məhsullar"
+msgstr ""
+
+#: goldapp/templates/index.html:182
+msgid "Ən son əlavə edilən məhsullar"
+msgstr ""
+
+#: goldapp/templates/index.html:224
+msgid "Bütün məhsullara baxın"
+msgstr ""
+
+#: goldapp/templates/index.html:307
+msgid "Bizim Partnyorlarımız"
+msgstr ""
+
+#: goldapp/templates/product.html:4
+msgid "Seçilən məhsul"
 msgstr ""
 
 #: goldin/settings.py:107
