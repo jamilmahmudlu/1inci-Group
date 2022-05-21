@@ -1,4 +1,4 @@
-{%load static%}
+{% load static i18n %}
 <div class="header-menu-mob shadow-xss position-fixed w-100 z-index-5 bg-white d-none d-block-sm">
     <div class="container">
       <div class="row">
@@ -45,17 +45,31 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 d-flex">
-          <div class="col-sm-3 mb-2">
+          <div class="col-sm-2">
+            <div style="margin-left:-120px; margin-top: 10px;">
+              {% get_current_language as LANGUAGE_CODE %}
+              {% if LANGUAGE_CODE == 'en' %}
+              <a style="color: #010107;" role="button" href="{% url 'goldapp:set_language'%}?lang=default&next={{request.path}}"><img style="margin-left: 10px; width: 30px; margin-top: -2px;" src="{% static 'images/azerbaijan-flag-png-xl.png' %}" alt="">
+              <span style="color: #010107; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 5px;">AZ</span>
+              </a>
+              {% else %}
+              <a style="color: #010107;" role="button" href="{% url 'goldapp:set_language'%}?lang=en&next={{request.path}}"><img style="margin-left: 10px; width: 30px; margin-top: -1px;" src="{% static 'images/english.png' %}" alt="">
+                <span style="color: #010107; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 5px;">EN</span>
+                </a>
+                {% endif %}
+            </div> 
+          </div>
+          <div class="col-sm-2 mb-2">
             <a href="{% url 'goldapp:index' %}">
 
-              <img src="{%static 'images/logo/inci.png'%}" width="auto" alt="" >
+              <img style="margin-left:-80px" src="{%static 'images/logo/inci.png'%}" width="auto" alt="" >
            
             </a>
           </div>
-          <div class="col-sm-4">
-            <a style="font-size: 13px;" href="tel:+994514129999" class="fw-700 text-black">Əlaqə: +994 (51) (55) 412 99 99</a>
+          <div class="col-sm-3">
+            <a style="font-size: 13px;" href="tel:+994514129999" class="fw-700 text-black">{% translate 'Əlaqə' %}: +994 (51) (55) 412 99 99</a>
             <br>
-            <a style="font-size: 13px;" href="mailto:info@1inci.az" class="fw-700 text-black">Mail:
+            <a style="font-size: 13px;" href="mailto:info@1inci.az" class="fw-700 text-black">{% translate 'Mail'%}:
               office@1inci.az</a>
 
           </div>
@@ -63,7 +77,7 @@
           <div class="col-sm-5 header-search me-auto mb-2 ml-3 ms-5">
             <form action="{% url 'search:search' %}" method="GET">
               <div class="input-group search_box">
-                <input type="text" class="form-control rounded-5" placeholder="Məhsul axtarın" name="q" value="{{search}}">
+                <input type="text" class="form-control rounded-5" placeholder="{% translate 'Məhsul axtarın' %}" name="q" value="{{search}}">
                 <button class="btn btn-primary ms-1 rounded-5" type="submit"><i class="feather-search font-xl text-grey-100 "></i></button>
               </div>
             </form>
@@ -80,7 +94,7 @@
           <div class="dropdown dropdown-right border-0">
             <button style="font-size: 15px;" class="btn border-0 rounded-0 dropdown-toggle dropdown-toggle-white text-grey-100 ps-3" type="button"
               data-bs-toggle="modal" data-bs-target="#categorymodal">
-              <i style="margin-top: 10px;" class="feather-align-left text-grey-100"></i>Bütün kateqoriyalar
+              <i style="margin-top: 10px;" class="feather-align-left text-grey-100"></i>{% translate 'Bütün kateqoriyalar' %}
             </button>
           </div>
         </div>
@@ -93,31 +107,31 @@
               </button>
               <ul class="navbar-nav" style="margin-left: auto">
                 <li class="nav-item active">
-                  <a style="font-size: 15px;" class="text-grey-100 nav-link" href="{% url 'goldapp:index' %}" aria-expanded="false">Ana səhifə
+                  <a style="font-size: 15px;" class="text-grey-100 nav-link" href="{% url 'goldapp:index' %}" aria-expanded="false">{% translate 'Ana səhifə' %}
                   </a>
                 </li>
                 
                 <li class="nav-item active">
-                  <a style="font-size: 15px; margin-left: 15px;" class="text-grey-100 nav-link" href="{% url 'goldapp:allproducts' %}" aria-expanded="false">Məhsullar
+                  <a style="font-size: 15px; margin-left: 15px;" class="text-grey-100 nav-link" href="{% url 'goldapp:allproducts' %}" aria-expanded="false"> {% translate 'Məhsullar' %}
                   </a>
                 </li>
                 <li class="nav-item active">
-                  <a style="font-size: 15px; margin-left: 15px;" class="text-grey-100 nav-link" href="{% url 'goldapp:contact' %}" aria-expanded="false">Əlaqə</a>
+                  <a style="font-size: 15px; margin-left: 15px;" class="text-grey-100 nav-link" href="{% url 'goldapp:contact' %}" aria-expanded="false"> {% translate 'Əlaqə' %}</a>
                 </li>
                 <li class="nav-item active">
-                  <a style="font-size: 15px; margin-left: 15px;" class="text-grey-100 nav-link" href="{% url 'goldapp:checkout' %}" aria-expanded="false">Ödəmə
+                  <a style="font-size: 15px; margin-left: 15px;" class="text-grey-100 nav-link" href="{% url 'goldapp:checkout' %}" aria-expanded="false">{% translate 'Ödəmə' %}
                   </a>
                 </li>
                 <li class="nav-item active">
-                  <a style="font-size: 15px; margin-left: 15px;" class="text-grey-100 nav-link" href="{% url 'goldapp:delivery' %}" aria-expanded="false">Çatdırılma
+                  <a style="font-size: 15px; margin-left: 15px;" class="text-grey-100 nav-link" href="{% url 'goldapp:delivery' %}" aria-expanded="false">{% translate 'Çatdırılma' %}
                   </a>
                 </li>
 
                 <li class="nav-item active">
-                  <a style="font-size: 15px; margin-left: 15px;" class="text-grey-100 nav-link" href="{% url 'goldapp:about' %}" aria-expanded="false">Haqqımızda</a>
+                  <a style="font-size: 15px; margin-left: 15px;" class="text-grey-100 nav-link" href="{% url 'goldapp:about' %}" aria-expanded="false">{% translate 'Haqqımızda' %}</a>
                 </li>
                 <li class="nav-item active">
-                  <a style="font-size: 15px; margin-left: 15px;" class="text-grey-100 nav-link" href="{% url 'goldapp:faq' %}" aria-expanded="false">Suallar</a>
+                  <a style="font-size: 15px; margin-left: 15px;" class="text-grey-100 nav-link" href="{% url 'goldapp:faq' %}" aria-expanded="false">{% translate 'Suallar' %}</a>
                 </li>
               </ul>
                <ul class="navbar-nav ms-auto">
@@ -126,13 +140,13 @@
                   <i style="margin-right: 5px;" class="fa-solid fa-user"></i>
                   <a style="margin-right: 10px; font-size: 15px; color: turquoise; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" href="{% url 'goldapp:index' %}">{{user.first_name}}</a>
                   <span style="border-left: 2px solid yellow">
-                    <a style="margin-left: 15px; font-size: 15px; color: turquoise; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" href="{% url 'logout' %}">Çıxış</a>
+                    <a style="margin-left: 15px; font-size: 15px; color: turquoise; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" href="{% url 'logout' %}">{% translate 'Çıxış'%}</a>
                   </span>
                   {% else %}
                   <i style="margin-right: 5px;" class="fa-solid fa-user"></i>
-                  <a style="margin-right: 10px; font-size: 15px; color: turquoise; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" href="{% url 'register' %}">Qeydiyyat</a>
+                  <a style="margin-right: 10px; font-size: 15px; color: turquoise; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" href="{% url 'register' %}">{% translate 'Qeydiyyat' %}</a>
                   <span style="border-left: 2px solid yellow">
-                  <a style="margin-left: 15px; font-size: 15px; color: turquoise; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" href="{% url 'login' %}">Giriş</a>
+                  <a style="margin-left: 15px; font-size: 15px; color: turquoise; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" href="{% url 'login' %}">{% translate 'Giriş' %}</a>
                   </span>
                   {% endif %}
                 </li>

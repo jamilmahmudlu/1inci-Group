@@ -4,7 +4,8 @@ from .models import *
 from .forms import *
 from django.core.mail import send_mail
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
+
 
 
 # Create your views here.
@@ -111,3 +112,19 @@ def checkout(request):
 
 def delivery(request):
     return render(request, 'delivery.html')
+
+
+def change_language(request):
+    if request.GET.get('lang') == 'az' or request.GET.get('lang') == 'en' or request.GET.get('lang') == 'default':
+        # print(request.META.get('HTTP_REFERER'))
+        path_list = request.META.get('HTTP_REFERER').split('/')
+        # print(path_list)
+        path_list[3] = request.GET.get('lang')
+        if request.GET.get('lang') == 'default':
+            path_list.pop(3)
+        path = '/'.join(path_list)
+        # print(path)
+        
+        response = HttpResponseRedirect(path)
+        response.set_cookie('django_language', request.GET['lang'])
+        return response

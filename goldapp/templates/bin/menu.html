@@ -36,6 +36,16 @@
               <li class="nav-item active">
                 <a class="nav-link" href="{% url 'goldapp:faq' %}" aria-expanded="false">Suallar</a>
               </li>
+              <li style="position: absolute; bottom: 0; left: 0;" class="nav-item active">
+                <a style="color: #010107;" role="button" href="{% url 'goldapp:set_language'%}?lang=default&next={{request.path}}"><img style="margin-left: 10px; width: 30px; margin-top: -2px;" src="{% static 'images/azerbaijan-flag-png-xl.png' %}" alt="">
+                  <span style="color: #010107; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 5px;">AZ</span>
+                </a>
+                
+                <a style="color: #010107;" role="button" href="{% url 'goldapp:set_language'%}?lang=en&next={{request.path}}"><img style="margin-left: 10px; width: 30px; margin-top: -1px;" src="{% static 'images/english.png' %}" alt="">
+                  <span style="color: #010107; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 5px;">EN</span>
+                  </a>
+              </li>
+              
               {% if request.user.is_authenticated %}
               <li class="nav-item active">
                 <i class="fa-solid fa-user"></i>
