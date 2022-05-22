@@ -3,7 +3,35 @@
 
 {%block title %}{% translate 'Çatdırılma' %}{% endblock %}
 {% block base %}
-<h1 class="fw-700 text-center mb-5 mt-5">
+<!-- <h1 class="fw-700 text-center mb-5 mt-5">
   {% translate 'Tezliklə məlumatlar yüklənəcək...' %}
-    </h1>
+    </h1> -->
+
+    <div class="container mb-5">
+      <div class="row ">
+        <div class="col-md-5">
+          <div class="img_about mt-5">
+            <img src="{% static 'images/APS_28-1144x763.jpeg' %}" alt="">
+          </div>
+        </div>
+        <div class="col-md-7 col-12">
+          <h2 class="text-center leter_spacing mt-5 fw-500 border-bottom pb-3 ">{% translate 'Çatdırılma qaydaları' %}</h2>
+          <li style="color: #000;" class="text_change">
+            {% translate 'Bakı, və Abşeron şəhərləri üçün  məhsulların çatdırılması həftə içi və həftə sonu saat 09:00-dan 18:00-dək həyata keçirilir.' %}
+            <br>
+            {% translate '18:00-dan sonra qəbul edilən sifarişlər növbəti və ya bir sonrakı gün ünvana çatdırılır.' %} 
+            <br><br>
+            {% translate 'Bir gün əvvəl edilən sifarişlər növbəti gün ərzində müştərinin ünvanına çatdırılır, ekspress çatdırılma isə sifariş verildiyi gün ödəniş əsasında həyata keçirilir - çatdırılma məbləği məsafədən asılı olaraq dəyişir və 5 azn-dən başlayır. Qiymətləri dəqiqləşdirmək üçün satış menecerlərimizə müraciət etməyiniz xahiş olunur.' %}
+            <br><br>
+            {% translate 'Sifarişlər binaların və ya fərdi yaşayış evlərinin girişinə qədər çatdırılır. Yükün boşaldılması və ya mərtəbəyə qaldırılması çatdırılma xidmətinə daxil deyildir.Əgər bu xidmət öncədən sifariş edilməyibsə, əlavə tətbiq olunacaq məbləği satış menecerlərimizdən dəqiqləşdirə bilərsiniz.' %}  
+            <br><br>
+             <div style="color: red;">{% translate 'DİQQƏT !' %}</div>  
+             
+             {% translate 'Məhsulu aldığınız zaman xarici görünüşündən və heç bir texniki zədələnməsi olmamasından əmin olun. Nəqliyyatdakı yükün qaimədə göstərilən say və komplektasiya ilə eyniliyinə əmin olun. Qaiməni imzaladığınız halda təhvil aldığınız mala heçbir iradınızın olmadığını təsdiq etmiş olursunuz. Sürücü ekspeditor çatdırılma etdiyi məhsulun texniki və funksional göstəriciləri haqqında şərh verə bilməz.' %}
+          </li> 
+        </div>
+
+      </div>
+      
+    </div>
 {% endblock %}
