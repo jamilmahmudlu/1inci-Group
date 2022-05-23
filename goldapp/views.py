@@ -1,4 +1,5 @@
 from itertools import product
+from sys import prefix
 from django.shortcuts import render, get_object_or_404, redirect, resolve_url
 from .models import *
 from .forms import *
@@ -119,9 +120,11 @@ def change_language(request):
         # print(request.META.get('HTTP_REFERER'))
         path_list = request.META.get('HTTP_REFERER').split('/')
         # print(path_list)
-        path_list[3] = request.GET.get('lang')
+        
         if request.GET.get('lang') == 'default':
             path_list.pop(3)
+        else:
+            path_list.insert(3, request.GET.get('lang'))
         path = '/'.join(path_list)
         # print(path)
         
