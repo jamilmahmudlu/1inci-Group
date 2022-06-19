@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-22 11:28+0000\n"
+"POT-Creation-Date: 2022-06-19 11:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: goldapp/templates/about.html:4 goldapp/templates/bin/footer.html:18
+#: goldapp/templates/about.html:4 goldapp/templates/bin/footer.html:19
 #: goldapp/templates/bin/header.html:131 goldapp/templates/bin/menu.html:34
 msgid "Haqqımızda"
 msgstr "About Us"
@@ -43,7 +43,7 @@ msgstr ""
 "products to individual or corporate customers. In addition, 1inci Group "
 "helps customers to purchase construction materials on credit."
 
-#: goldapp/templates/allproducts.html:4 goldapp/templates/bin/footer.html:11
+#: goldapp/templates/allproducts.html:4 goldapp/templates/bin/footer.html:12
 #: goldapp/templates/bin/header.html:115 goldapp/templates/bin/menu.html:22
 msgid "Məhsullar"
 msgstr "Products"
@@ -56,53 +56,56 @@ msgstr "All products"
 msgid "Sayt xəritəsi"
 msgstr "Site Map"
 
-#: goldapp/templates/bin/footer.html:8 goldapp/templates/bin/header.html:110
+#: goldapp/templates/bin/footer.html:9 goldapp/templates/bin/header.html:110
 #: goldapp/templates/bin/menu.html:16 goldapp/templates/index.html:5
 msgid "Ana səhifə"
 msgstr "Home"
 
-#: goldapp/templates/bin/footer.html:9 goldapp/templates/bin/header.html:122
-#: goldapp/templates/bin/menu.html:28 goldapp/templates/checkout.html:4
+#: goldapp/templates/bin/footer.html:10 goldapp/templates/bin/footer.html:23
+#: goldapp/templates/bin/header.html:122 goldapp/templates/bin/menu.html:28
+#: goldapp/templates/checkout.html:4
 msgid "Ödəmə"
 msgstr "Checkout"
 
-#: goldapp/templates/bin/footer.html:12 goldapp/templates/bin/header.html:126
-#: goldapp/templates/bin/menu.html:31 goldapp/templates/delivery.html:4
+#: goldapp/templates/bin/footer.html:13 goldapp/templates/bin/footer.html:26
+#: goldapp/templates/bin/header.html:126 goldapp/templates/bin/menu.html:31
+#: goldapp/templates/delivery.html:4
 msgid "Çatdırılma"
 msgstr "Delivery"
 
-#: goldapp/templates/bin/footer.html:14 goldapp/templates/bin/header.html:70
+#: goldapp/templates/bin/footer.html:15 goldapp/templates/bin/header.html:70
 #: goldapp/templates/bin/header.html:119 goldapp/templates/bin/menu.html:25
 #: goldapp/templates/contact.html:6
 msgid "Əlaqə"
 msgstr "Contact"
 
-#: goldapp/templates/bin/footer.html:15 goldapp/templates/bin/header.html:134
-#: goldapp/templates/bin/menu.html:37 goldapp/templates/faq.html:4
+#: goldapp/templates/bin/footer.html:16 goldapp/templates/bin/footer.html:29
+#: goldapp/templates/bin/header.html:134 goldapp/templates/bin/menu.html:37
+#: goldapp/templates/faq.html:4
 msgid "Suallar"
 msgstr "FAQ"
 
-#: goldapp/templates/bin/footer.html:23
+#: goldapp/templates/bin/footer.html:37
 msgid "Bizimlə Əlaqə"
 msgstr "Contact With Us"
 
-#: goldapp/templates/bin/footer.html:26
+#: goldapp/templates/bin/footer.html:40
 msgid "Telefon nömrəsi"
 msgstr "Phone number"
 
-#: goldapp/templates/bin/footer.html:28
+#: goldapp/templates/bin/footer.html:42
 msgid "Mail ünvanı"
 msgstr "Mail address"
 
-#: goldapp/templates/bin/footer.html:32
+#: goldapp/templates/bin/footer.html:46
 msgid "Ünvan: Dərnəgül şossesi, Ziya Bünyadov 13"
 msgstr "Address: Darnagul highway, Ziya Bunyadov 13"
 
-#: goldapp/templates/bin/footer.html:36
+#: goldapp/templates/bin/footer.html:50
 msgid "Sosial Media"
 msgstr "Social Media"
 
-#: goldapp/templates/bin/footer.html:54
+#: goldapp/templates/bin/footer.html:68
 msgid "Müəllif hüquqları © 2022 DigiMedia Agency. Bütün hüquqlar qorunur."
 msgstr "Copyright © 2022 DigiMedia Agency. All rights are reserved"
 
@@ -158,7 +161,8 @@ msgstr "Checkout methods"
 
 #: goldapp/templates/checkout.html:21
 msgid "Siz fərqli ödəmə üsulları ilə şirkətimizdən alış-veriş edə bilərsiniz:"
-msgstr "You can make purchases from our company with different payment methods:"
+msgstr ""
+"You can make purchases from our company with different payment methods:"
 
 #: goldapp/templates/checkout.html:25
 msgid "1. NAĞD"
@@ -168,7 +172,8 @@ msgstr "1. CASH"
 msgid ""
 "Bütün məhsullarımızdan endirimli şəkildə nağd ödəmə vasitəsi ilə yararlana "
 "bilərsiniz."
-msgstr "Take advantage of all our products at a discounted cash payment you can."
+msgstr ""
+"Take advantage of all our products at a discounted cash payment you can."
 
 #: goldapp/templates/checkout.html:30
 msgid "2. TAKSİT KARTLARI"
@@ -178,7 +183,9 @@ msgstr "2. DEPOSIT CARDS"
 msgid ""
 "BirKart, TamKart, BolKart, Albalı Kart kimi taksit kartlarından istifadə "
 "edərək, siz ödəmənizi 12 aya qədər hissəli şəkildə edə bilərsiniz."
-msgstr "Using installment cards such as BirKart, TamKart, BolKart, Albalı Kart, you can make your payment in installments for up to 12 months."
+msgstr ""
+"Using installment cards such as BirKart, TamKart, BolKart, Albalı Kart, you "
+"can make your payment in installments for up to 12 months."
 
 #: goldapp/templates/checkout.html:35
 msgid "3. KORPORATİV"
@@ -189,7 +196,9 @@ msgid ""
 "Bir sıra şirkətlər üçün həmçinin korporativ təkliflərimiz də mövcuddur. Siz "
 "bizim şirkətimizlə korporativ şəkildə əməkdaşlıq edərək, aldığınız "
 "məhsulların ödənişini köçürmə yolu ilə də edə bilərsiniz."
-msgstr "We also have corporate offers for a number of companies. You can also cooperate with our company and pay for the products you buy by transfer."
+msgstr ""
+"We also have corporate offers for a number of companies. You can also "
+"cooperate with our company and pay for the products you buy by transfer."
 
 #: goldapp/templates/checkout.html:40
 msgid "4. KREDİT"
@@ -199,64 +208,78 @@ msgstr "4. CREDIT"
 msgid ""
 "1inci Group sizin işinizi asanlaşdırmaq üçün məhsulları kreditlə əldə etmək "
 "şansını da verir. Kredit şərtlərimiz ilə tanış olun:"
-msgstr "1inci Group also gives you a chance to get products on credit to make your work easier. Get acquainted with our credit terms:"
+msgstr ""
+"1inci Group also gives you a chance to get products on credit to make your "
+"work easier. Get acquainted with our credit terms:"
 
 #: goldapp/templates/checkout.html:46
 msgid ""
 "Rəsmi iş yeriniz varsa və əvvəlki kredit tarixçənizdə gecikmə olmayıbsa, 3 "
 "aydan başlayan müddətə kredit əldə edə bilərsiniz. Bu zaman illik faiz "
 "dərəcəsi 23,5-dir."
-msgstr "If you have an official job and there is no delay in your previous credit history, you can get a credit for a period starting from 3 months. In this case, the annual interest rate is 23,5."
+msgstr ""
+"If you have an official job and there is no delay in your previous credit "
+"history, you can get a credit for a period starting from 3 months. In this "
+"case, the annual interest rate is 23,5."
 
 #: goldapp/templates/checkout.html:49
 msgid ""
 "Rəsmi iş yeriniz yoxdursa (əmək müqaviləsi ilə işləmirsinizsə), tək "
 "şəxsiyyət vəsiqəsilə ilkin ödənişsiz kreditlə istənilən materialı ala "
 "bilərsiniz. Bu zaman illik kredit faizi 30-dur."
-msgstr "If you do not have a formal job (if you do not work under an employment contract), you can buy any material with a down payment on a single ID card. In this case, the annual interest rate is 30."
+msgstr ""
+"If you do not have a formal job (if you do not work under an employment "
+"contract), you can buy any material with a down payment on a single ID card. "
+"In this case, the annual interest rate is 30."
 
 #: goldapp/templates/checkout.html:52
 msgid ""
 "Kredit verilməsi üçün daha öncəki kredit tarixçəsində dollar problemi "
 "olmamalı, öhdəliyiniz çox olmamalıdır."
-msgstr "In order to get a credit, you must not have a dollar problem in your previous credit history, and you must not have too many liabilities."
+msgstr ""
+"In order to get a credit, you must not have a dollar problem in your "
+"previous credit history, and you must not have too many liabilities."
 
 #: goldapp/templates/checkout.html:55
 msgid ""
 "Əsas tələb etibarlılıq müddəti bitməyən şəxsiyyət vəsiqəsi və 2 ev "
 "nömrəsidir. Verilən nömrələrlə əlaqə saxlanılır. Öz ev nömrənizin olması "
 "şərt deyil."
-msgstr "The main requirement is an expired ID card and 2 house numbers. Contact numbers are maintained. You do not have to have your own home number."
+msgstr ""
+"The main requirement is an expired ID card and 2 house numbers. Contact "
+"numbers are maintained. You do not have to have your own home number."
 
 #: goldapp/templates/checkout.html:58
 msgid ""
 "Naxçıvan MR qeydiyyatı istisna olmaqla, digər ölkə qeydiyyatında olan "
 "vətəndaşlara kredit ayrılır (sorğunuz təsdiqlənərsə)."
-msgstr "Except for the registration of Nakhchivan AR, credits are issued to citizens registered in other countries (if your request is approved)."
+msgstr ""
+"Except for the registration of Nakhchivan AR, credits are issued to citizens "
+"registered in other countries (if your request is approved)."
 
-#: goldapp/templates/checkout.html:61
-msgid "Bank kreditidir. İlkin ödəniş, bank tələb edərsə, istənilir."
-msgstr "It is a bank credit. An initial payment is required if required by the bank."
-
-#: goldapp/templates/checkout.html:65
+#: goldapp/templates/checkout.html:62
 msgid "QEYD:"
 msgstr "NOTE:"
 
-#: goldapp/templates/checkout.html:66
+#: goldapp/templates/checkout.html:63
 msgid ""
 "- Ödəməni ofisdən əlavə, məhsulların çatdırılması zamanı təhvil nöqtəsində "
 "nağd və POS terminal vasitəsi ilə həyata keçirə bilərsiniz."
-msgstr "- In addition to the office, you can pay in cash and at the POS terminal at the point of delivery during the delivery of products."
+msgstr ""
+"- In addition to the office, you can pay in cash and at the POS terminal at "
+"the point of delivery during the delivery of products."
 
-#: goldapp/templates/checkout.html:68
+#: goldapp/templates/checkout.html:65
 msgid "DİQQƏT:"
 msgstr "WARNING:"
 
-#: goldapp/templates/checkout.html:69
+#: goldapp/templates/checkout.html:66
 msgid ""
 "- Sifariş olunan məhsullar təhvil alındıqda, satışla əlaqədar qəbz və satış "
 "qaiməsi təqdim edilir."
-msgstr "- When the ordered products are delivered, a receipt and sales receipt related to the sale are submitted."
+msgstr ""
+"- When the ordered products are delivered, a receipt and sales receipt "
+"related to the sale are submitted."
 
 #: goldapp/templates/delivery.html:18
 msgid "Çatdırılma qaydaları"
@@ -328,7 +351,7 @@ msgid "Tez-tez soruşulan suallar"
 msgstr "Frequently asked questions"
 
 #: goldapp/templates/index.html:137
-msgid "Önə çıxan məhsullar"
+msgid "Önə çıxan tikinti materialları"
 msgstr "Popular products"
 
 #: goldapp/templates/index.html:182
@@ -347,11 +370,11 @@ msgstr "Our partners"
 msgid "Seçilən məhsul"
 msgstr "Selected product"
 
-#: goldin/settings.py:107
+#: goldin/settings.py:108
 msgid "Azərbaycan"
 msgstr ""
 
-#: goldin/settings.py:108
+#: goldin/settings.py:109
 msgid "English"
 msgstr ""
 
@@ -1609,6 +1632,15 @@ msgstr ""
 #: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:249
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#: venv/lib/python3.9/site-packages/modeltranslation/widgets.py:26
+msgid "None"
+msgstr ""
+
+#~ msgid "Bank kreditidir. İlkin ödəniş, bank tələb edərsə, istənilir."
+#~ msgstr ""
+#~ "It is a bank credit. An initial payment is required if required by the "
+#~ "bank."
 
 #, fuzzy
 #~| msgid "Haqqımızda"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-22 11:28+0000\n"
+"POT-Creation-Date: 2022-06-19 11:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: goldapp/templates/about.html:4 goldapp/templates/bin/footer.html:18
+#: goldapp/templates/about.html:4 goldapp/templates/bin/footer.html:19
 #: goldapp/templates/bin/header.html:131 goldapp/templates/bin/menu.html:34
 msgid "Haqqımızda"
 msgstr ""
@@ -37,7 +37,7 @@ msgid ""
 "kreditlə tikinti materialları almaqda da yardımçı olur."
 msgstr ""
 
-#: goldapp/templates/allproducts.html:4 goldapp/templates/bin/footer.html:11
+#: goldapp/templates/allproducts.html:4 goldapp/templates/bin/footer.html:12
 #: goldapp/templates/bin/header.html:115 goldapp/templates/bin/menu.html:22
 msgid "Məhsullar"
 msgstr ""
@@ -50,53 +50,56 @@ msgstr ""
 msgid "Sayt xəritəsi"
 msgstr ""
 
-#: goldapp/templates/bin/footer.html:8 goldapp/templates/bin/header.html:110
+#: goldapp/templates/bin/footer.html:9 goldapp/templates/bin/header.html:110
 #: goldapp/templates/bin/menu.html:16 goldapp/templates/index.html:5
 msgid "Ana səhifə"
 msgstr ""
 
-#: goldapp/templates/bin/footer.html:9 goldapp/templates/bin/header.html:122
-#: goldapp/templates/bin/menu.html:28 goldapp/templates/checkout.html:4
+#: goldapp/templates/bin/footer.html:10 goldapp/templates/bin/footer.html:23
+#: goldapp/templates/bin/header.html:122 goldapp/templates/bin/menu.html:28
+#: goldapp/templates/checkout.html:4
 msgid "Ödəmə"
 msgstr ""
 
-#: goldapp/templates/bin/footer.html:12 goldapp/templates/bin/header.html:126
-#: goldapp/templates/bin/menu.html:31 goldapp/templates/delivery.html:4
+#: goldapp/templates/bin/footer.html:13 goldapp/templates/bin/footer.html:26
+#: goldapp/templates/bin/header.html:126 goldapp/templates/bin/menu.html:31
+#: goldapp/templates/delivery.html:4
 msgid "Çatdırılma"
 msgstr ""
 
-#: goldapp/templates/bin/footer.html:14 goldapp/templates/bin/header.html:70
+#: goldapp/templates/bin/footer.html:15 goldapp/templates/bin/header.html:70
 #: goldapp/templates/bin/header.html:119 goldapp/templates/bin/menu.html:25
 #: goldapp/templates/contact.html:6
 msgid "Əlaqə"
 msgstr ""
 
-#: goldapp/templates/bin/footer.html:15 goldapp/templates/bin/header.html:134
-#: goldapp/templates/bin/menu.html:37 goldapp/templates/faq.html:4
+#: goldapp/templates/bin/footer.html:16 goldapp/templates/bin/footer.html:29
+#: goldapp/templates/bin/header.html:134 goldapp/templates/bin/menu.html:37
+#: goldapp/templates/faq.html:4
 msgid "Suallar"
 msgstr ""
 
-#: goldapp/templates/bin/footer.html:23
+#: goldapp/templates/bin/footer.html:37
 msgid "Bizimlə Əlaqə"
 msgstr ""
 
-#: goldapp/templates/bin/footer.html:26
+#: goldapp/templates/bin/footer.html:40
 msgid "Telefon nömrəsi"
 msgstr ""
 
-#: goldapp/templates/bin/footer.html:28
+#: goldapp/templates/bin/footer.html:42
 msgid "Mail ünvanı"
 msgstr ""
 
-#: goldapp/templates/bin/footer.html:32
+#: goldapp/templates/bin/footer.html:46
 msgid "Ünvan: Dərnəgül şossesi, Ziya Bünyadov 13"
 msgstr ""
 
-#: goldapp/templates/bin/footer.html:36
+#: goldapp/templates/bin/footer.html:50
 msgid "Sosial Media"
 msgstr ""
 
-#: goldapp/templates/bin/footer.html:54
+#: goldapp/templates/bin/footer.html:68
 msgid "Müəllif hüquqları © 2022 DigiMedia Agency. Bütün hüquqlar qorunur."
 msgstr ""
 
@@ -228,25 +231,21 @@ msgid ""
 "vətəndaşlara kredit ayrılır (sorğunuz təsdiqlənərsə)."
 msgstr ""
 
-#: goldapp/templates/checkout.html:61
-msgid "Bank kreditidir. İlkin ödəniş, bank tələb edərsə, istənilir."
-msgstr ""
-
-#: goldapp/templates/checkout.html:65
+#: goldapp/templates/checkout.html:62
 msgid "QEYD:"
 msgstr ""
 
-#: goldapp/templates/checkout.html:66
+#: goldapp/templates/checkout.html:63
 msgid ""
 "- Ödəməni ofisdən əlavə, məhsulların çatdırılması zamanı təhvil nöqtəsində "
 "nağd və POS terminal vasitəsi ilə həyata keçirə bilərsiniz."
 msgstr ""
 
-#: goldapp/templates/checkout.html:68
+#: goldapp/templates/checkout.html:65
 msgid "DİQQƏT:"
 msgstr ""
 
-#: goldapp/templates/checkout.html:69
+#: goldapp/templates/checkout.html:66
 msgid ""
 "- Sifariş olunan məhsullar təhvil alındıqda, satışla əlaqədar qəbz və satış "
 "qaiməsi təqdim edilir."
@@ -304,7 +303,7 @@ msgid "Tez-tez soruşulan suallar"
 msgstr ""
 
 #: goldapp/templates/index.html:137
-msgid "Önə çıxan məhsullar"
+msgid "Önə çıxan tikinti materialları"
 msgstr ""
 
 #: goldapp/templates/index.html:182
@@ -323,11 +322,11 @@ msgstr ""
 msgid "Seçilən məhsul"
 msgstr ""
 
-#: goldin/settings.py:107
+#: goldin/settings.py:108
 msgid "Azərbaycan"
 msgstr ""
 
-#: goldin/settings.py:108
+#: goldin/settings.py:109
 msgid "English"
 msgstr ""
 
@@ -1584,4 +1583,8 @@ msgstr ""
 
 #: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:249
 msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/modeltranslation/widgets.py:26
+msgid "None"
 msgstr ""
