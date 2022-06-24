@@ -7,6 +7,11 @@ class AddSlider(admin.ModelAdmin):
 admin.site.register(Slider, AddSlider) 
 
 
+class AddEnglishSlider(admin.ModelAdmin):
+	list_display = ['title', 'created', 'updated']
+admin.site.register(EnglishSlider, AddEnglishSlider) 
+
+
 class AddPartnyor(admin.ModelAdmin):
 	list_display = ['title', 'created', 'updated']
 admin.site.register(Partnyor, AddPartnyor) 

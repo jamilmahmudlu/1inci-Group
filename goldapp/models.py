@@ -17,6 +17,21 @@ class Slider(models.Model):
 	def __str__(self):
 		return self.title
 
+
+class EnglishSlider(models.Model):
+	title = models.CharField(max_length=150, verbose_name='Title')
+	created = models.DateTimeField(auto_now_add=True)
+	updated = models.DateTimeField(auto_now=True)
+	engslideimg = models.FileField(upload_to = "slide/", verbose_name='English slide image')
+
+	class Meta:
+		verbose_name = "English Slider"
+		verbose_name_plural = 'English Sliders'
+
+	def __str__(self):
+		return self.title
+
+
 # partnyor
 class Partnyor(models.Model):
 	title = models.CharField(max_length=150, verbose_name='Title')
