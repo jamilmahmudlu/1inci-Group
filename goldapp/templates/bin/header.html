@@ -166,7 +166,7 @@
         <div class="col-12 header-search ms-auto me-2" style="margin-top: 80px" >
           <form action="{% url 'search:search' %}" method="GET" >
             <div class="input-group search_box">
-              <input type="text" class="form-control rounded-5" placeholder="Məhsul axtarın" name="q" value="{{search}}">
+              <input type="text" class="form-control rounded-5" placeholder="{% translate 'Məhsul axtarın' %}" name="q" value="{{search}}">
               <button class="btn btn-primary mx-2 rounded-5" type="submit"><i class="feather-search font-xl text-grey-100 "></i></button>
             </div>
           </form>

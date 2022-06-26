@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-19 11:30+0000\n"
+"POT-Creation-Date: 2022-06-26 08:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -121,7 +121,7 @@ msgstr "Categories"
 msgid "Mail"
 msgstr "Mail"
 
-#: goldapp/templates/bin/header.html:80
+#: goldapp/templates/bin/header.html:80 goldapp/templates/bin/header.html:169
 msgid "Məhsul axtarın"
 msgstr "Search the product"
 
@@ -350,19 +350,19 @@ msgstr ""
 msgid "Tez-tez soruşulan suallar"
 msgstr "Frequently asked questions"
 
-#: goldapp/templates/index.html:137
+#: goldapp/templates/index.html:162
 msgid "Önə çıxan tikinti materialları"
 msgstr "Popular products"
 
-#: goldapp/templates/index.html:182
+#: goldapp/templates/index.html:207
 msgid "Ən son əlavə edilən məhsullar"
 msgstr "Most recently added products"
 
-#: goldapp/templates/index.html:224
+#: goldapp/templates/index.html:249
 msgid "Bütün məhsullara baxın"
 msgstr "See all the products"
 
-#: goldapp/templates/index.html:307
+#: goldapp/templates/index.html:332
 msgid "Bizim Partnyorlarımız"
 msgstr "Our partners"
 
