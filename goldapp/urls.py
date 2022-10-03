@@ -14,6 +14,7 @@ urlpatterns = [
     path('faq', views.faq, name="faq"),
     path('checkout', views.checkout, name="checkout"),
     path('delivery', views.delivery, name="delivery"),
+    path('leylaninulduzlari', views.leylaninulduzlari, name="leylaninulduzlari"),
     path('set-language/', views.change_language, name="set_language"),
 
 ]
